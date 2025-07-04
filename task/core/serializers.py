@@ -7,6 +7,7 @@ class ProjectSerializer(serializers.ModelSerializer):
     class Meta:
         model = Project
         fields = ['id', 'name', 'description']
+        
 
 class TaskSerializer(serializers.ModelSerializer):
     collaborateur_details = serializers.SerializerMethodField(read_only=True)
